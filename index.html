@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tall Consulting - Leading generative AI consulting firm specializing in healthcare, finance, and enterprise AI solutions. Transform your business with cutting-edge AI technology.">
+    <meta name="keywords" content="AI consulting, generative AI, machine learning, healthcare AI, finance AI, enterprise AI solutions, Anuroop Talluri">
+    <meta name="author" content="Anuroop Talluri">
+    <meta property="og:title" content="Tall Consulting - Pioneering AI Solutions">
+    <meta property="og:description" content="Transform your business with cutting-edge generative AI solutions for healthcare, finance, and beyond.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tallconsulting.github.io">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23667eea'/%3E%3Cstop offset='100%25' style='stop-color:%23764ba2'/%3E%3C/linearGradient%3E%3Ctext y='75' font-size='75' font-weight='bold' fill='url(%23g)'%3ET%3C/text%3E%3C/svg%3E">
+    <title>Tall Consulting - Pioneering AI Solutions for Tomorrow's Challenges</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Space Grotesk', sans-serif; }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        /* Glassmorphism for dark sections only */
+        .glass-dark {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Animated gradient background for hero only */
+        .animated-gradient {
+            background: linear-gradient(-45deg, #1e3a8a, #581c87, #7c3aed, #2563eb);
+            background-size: 400% 400%;
+            animation: gradient 12s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Particle effect for hero only */
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: float 20s infinite;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            33% { transform: translateY(-100px) translateX(100px); }
+            66% { transform: translateY(100px) translateX(-100px); }
+        }
+        
+        /* Modern button styles */
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            transition: left 0.3s ease;
+        }
+        
+        .btn-primary:hover::before {
+            left: 0;
+        }
+        
+        .btn-primary span {
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        }
+        
+        /* Glow effect */
+        .glow {
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+        }
+    </style>
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Tall Consulting",
+        "description": "Leading generative AI consulting firm specializing in healthcare, finance, and enterprise AI solutions",
+        "url": "https://tallconsulting.github.io",
+        "email": "tallconsulting2024@gmail.com",
+        "telephone": "0000000000",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Chicago",
+            "addressRegion": "IL",
+            "addressCountry": "USA"
+        },
+        "founder": {
+            "@type": "Person",
+            "name": "Anuroop Talluri",
+            "jobTitle": "Founder & CEO",
+            "url": "https://www.linkedin.com/in/annutalluri/"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/annutalluri/"
+        ]
+    }
+    </script>
+</head>
+<body class="bg-gray-50" x-data="{ mobileMenu: false, scrolled: false }" x-init="AOS.init({ duration: 800, once: true })" @scroll.window="scrolled = window.pageYOffset > 50">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" :class="scrolled ? 'bg-white shadow-lg' : 'bg-transparent'">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold" :class="scrolled ? 'text-gray-900' : 'text-white'">
+                        <span class="gradient-text">TALL</span> <span :class="scrolled ? 'text-gray-700' : 'text-gray-200'">Consulting</span>
+                    </h1>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="hover:text-indigo-600 transition-colors" :class="scrolled ? 'text-gray-700' : 'text-white'">Home</a>
+                    <a href="#about" class="hover:text-indigo-600 transition-colors" :class="scrolled ? 'text-gray-700' : 'text-white'">About</a>
+                    <a href="#services" class="hover:text-indigo-600 transition-colors" :class="scrolled ? 'text-gray-700' : 'text-white'">Services</a>
+                    <a href="#case-studies" class="hover:text-indigo-600 transition-colors" :class="scrolled ? 'text-gray-700' : 'text-white'">Case Studies</a>
+                    <a href="#insights" class="hover:text-indigo-600 transition-colors" :class="scrolled ? 'text-gray-700' : 'text-white'">Insights</a>
+                    <a href="#contact" class="btn-primary text-white px-6 py-2 rounded-full">
+                        <span>Get Started</span>
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button @click="mobileMenu = !mobileMenu" class="md:hidden" :class="scrolled ? 'text-gray-700' : 'text-white'">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenu" x-transition class="md:hidden bg-white shadow-lg">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#home" class="block py-2 text-gray-700 hover:text-indigo-600">Home</a>
+                <a href="#about" class="block py-2 text-gray-700 hover:text-indigo-600">About</a>
+                <a href="#services" class="block py-2 text-gray-700 hover:text-indigo-600">Services</a>
+                <a href="#case-studies" class="block py-2 text-gray-700 hover:text-indigo-600">Case Studies</a>
+                <a href="#insights" class="block py-2 text-gray-700 hover:text-indigo-600">Insights</a>
+                <a href="#contact" class="block py-2 text-indigo-600 font-semibold">Get Started</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section (Dark Theme) -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 animated-gradient opacity-40"></div>
+        
+        <!-- Particle Effects -->
+        <div class="absolute inset-0">
+            <div class="particle w-2 h-2" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+            <div class="particle w-3 h-3" style="top: 80%; left: 25%; animation-delay: 2s;"></div>
+            <div class="particle w-2 h-2" style="top: 60%; left: 60%; animation-delay: 4s;"></div>
+            <div class="particle w-4 h-4" style="top: 40%; left: 80%; animation-delay: 6s;"></div>
+            <div class="particle w-2 h-2" style="top: 90%; left: 90%; animation-delay: 8s;"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+            <h2 class="text-5xl md:text-7xl font-black mb-6 text-white drop-shadow-lg" data-aos="fade-up">
+                <span class="block">Transforming Business</span>
+                <span class="block gradient-text">with Generative AI</span>
+            </h2>
+            <p class="text-xl md:text-2xl mb-8 text-gray-100 max-w-3xl mx-auto drop-shadow-md" data-aos="fade-up" data-aos-delay="200">
+                We architect intelligent solutions that revolutionize healthcare, finance, and enterprise operations through cutting-edge AI technology.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
+                <a href="#contact" class="btn-primary text-white px-8 py-4 rounded-full font-semibold hover:scale-105 transform transition">
+                    <span>Start Your AI Transformation</span>
+                </a>
+                <a href="#case-studies" class="glass-dark border border-gray-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-gray-900 transition">
+                    View Success Stories
+                </a>
+            </div>
+            
+            <!-- Stats Preview -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16" data-aos="fade-up" data-aos-delay="600">
+                <div class="glass-dark rounded-lg p-4 hover:bg-white hover:bg-opacity-20 transition-all">
+                    <div class="text-3xl font-bold gradient-text">250+</div>
+                    <div class="text-sm text-gray-200 font-medium">AI Models Deployed</div>
+                </div>
+                <div class="glass-dark rounded-lg p-4 hover:bg-white hover:bg-opacity-20 transition-all">
+                    <div class="text-3xl font-bold gradient-text">85%</div>
+                    <div class="text-sm text-gray-200 font-medium">Cost Reduction</div>
+                </div>
+                <div class="glass-dark rounded-lg p-4 hover:bg-white hover:bg-opacity-20 transition-all">
+                    <div class="text-3xl font-bold gradient-text">3x</div>
+                    <div class="text-sm text-gray-200 font-medium">ROI Average</div>
+                </div>
+                <div class="glass-dark rounded-lg p-4 hover:bg-white hover:bg-opacity-20 transition-all">
+                    <div class="text-3xl font-bold gradient-text">24/7</div>
+                    <div class="text-sm text-gray-200 font-medium">AI Support</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-white text-3xl drop-shadow-lg"></i>
+        </div>
+    </section>
+    
+    <!-- About Section (Light Theme) -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h3 class="text-4xl font-bold mb-6 text-gray-900">
+                        <span class="gradient-text">Pioneering</span> the Future of AI
+                    </h3>
+                    <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                        Tall Consulting stands at the intersection of innovation and implementation, delivering transformative AI solutions that don't just promise results – they guarantee them.
+                    </p>
+                    <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                        Founded by Anuroop Talluri, a visionary technologist with deep expertise across AI, finance, and global business strategy, we bring a unique perspective to every challenge.
+                    </p>
+                    
+                    <!-- Founder Credentials -->
+                    <div class="bg-indigo-50 rounded-xl p-6 mb-6">
+                        <h4 class="font-semibold text-gray-900 mb-4 flex items-center">
+                            <i class="fas fa-award text-indigo-600 mr-2"></i> Founder Credentials
+                        </h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                            <div class="flex items-center text-gray-700">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Microsoft Azure Certified
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                PMP Certified
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                SAFe® 5 POPM
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Thunderbird MBA
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://www.linkedin.com/in/annutalluri/" target="_blank" class="inline-flex items-center text-indigo-600 hover:text-indigo-700 transition">
+                        <i class="fab fa-linkedin mr-2"></i> Connect with Anuroop
+                    </a>
+                </div>
+                
+                <div class="relative" data-aos="fade-left">
+                    <div class="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-gradient-to-br from-indigo-500 to-purple-600 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-rocket text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">Innovation First</h4>
+                                    <p class="text-gray-600 text-sm">Leveraging the latest in LLMs, computer vision, and neural architectures</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-gradient-to-br from-purple-500 to-pink-600 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-chart-line text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">ROI Driven</h4>
+                                    <p class="text-gray-600 text-sm">Every solution designed with measurable business impact in mind</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-gradient-to-br from-green-500 to-teal-600 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-shield-alt text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">Enterprise Ready</h4>
+                                    <p class="text-gray-600 text-sm">Secure, scalable, and compliant with industry standards</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-gradient-to-br from-orange-500 to-red-600 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-users text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">Expert Team</h4>
+                                    <p class="text-gray-600 text-sm">PhD researchers, industry veterans, and implementation specialists</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section (Light Theme) -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold mb-4 text-gray-900" data-aos="fade-up">
+                    <span class="gradient-text">AI Solutions</span> That Scale
+                </h3>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    From proof of concept to enterprise deployment, we deliver end-to-end AI transformation
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-white rounded-xl p-8 h-full hover-lift shadow-lg border border-gray-100">
+                        <div class="bg-gradient-to-br from-indigo-500 to-purple-600 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-brain text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">Generative AI Solutions</h4>
+                        <p class="text-gray-600 mb-4">
+                            Deploy state-of-the-art LLMs, multimodal AI, and custom foundation models tailored to your domain.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li><i class="fas fa-arrow-right text-indigo-600 mr-2"></i>Custom GPT implementations</li>
+                            <li><i class="fas fa-arrow-right text-indigo-600 mr-2"></i>RAG architectures</li>
+                            <li><i class="fas fa-arrow-right text-indigo-600 mr-2"></i>AI agents & workflows</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-white rounded-xl p-8 h-full hover-lift shadow-lg border border-gray-100">
+                        <div class="bg-gradient-to-br from-purple-500 to-pink-600 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-microscope text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">Healthcare AI</h4>
+                        <p class="text-gray-600 mb-4">
+                            Revolutionary AI applications for diagnostics, drug discovery, and personalized medicine.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li><i class="fas fa-arrow-right text-purple-600 mr-2"></i>Medical image analysis</li>
+                            <li><i class="fas fa-arrow-right text-purple-600 mr-2"></i>Clinical decision support</li>
+                            <li><i class="fas fa-arrow-right text-purple-600 mr-2"></i>Patient risk prediction</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-white rounded-xl p-8 h-full hover-lift shadow-lg border border-gray-100">
+                        <div class="bg-gradient-to-br from-green-500 to-teal-600 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-chart-line text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">Financial AI</h4>
+                        <p class="text-gray-600 mb-4">
+                            Advanced algorithms for trading, risk management, and regulatory compliance.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li><i class="fas fa-arrow-right text-green-600 mr-2"></i>Algorithmic trading</li>
+                            <li><i class="fas fa-arrow-right text-green-600 mr-2"></i>Fraud detection</li>
+                            <li><i class="fas fa-arrow-right text-green-600 mr-2"></i>Credit risk modeling</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="group" data-aos="fade-up" data-aos-delay="500">
+                    <div class="bg-white rounded-xl p-8 h-full hover-lift shadow-lg border border-gray-100">
+                        <div class="bg-gradient-to-br from-blue-500 to-cyan-600 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-eye text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">Computer Vision</h4>
+                        <p class="text-gray-600 mb-4">
+                            Transform visual data into actionable insights with advanced neural networks.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li><i class="fas fa-arrow-right text-blue-600 mr-2"></i>Object detection & tracking</li>
+                            <li><i class="fas fa-arrow-right text-blue-600 mr-2"></i>Quality inspection</li>
+                            <li><i class="fas fa-arrow-right text-blue-600 mr-2"></i>Autonomous systems</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="group" data-aos="fade-up" data-aos-delay="600">
+                    <div class="bg-white rounded-xl p-8 h-full hover-lift shadow-lg border border-gray-100">
+                        <div class="bg-gradient-to-br from-orange-500 to-red-600 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-cogs text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">MLOps & Infrastructure</h4>
+                        <p class="text-gray-600 mb-4">
+                            Build robust, scalable AI infrastructure that grows with your business.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li><i class="fas fa-arrow-right text-orange-600 mr-2"></i>Model deployment pipelines</li>
+                            <li><i class="fas fa-arrow-right text-orange-600 mr-2"></i>Performance monitoring</li>
+                            <li><i class="fas fa-arrow-right text-orange-600 mr-2"></i>A/B testing frameworks</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="group" data-aos="fade-up" data-aos-delay="700">
+                    <div class="bg-white rounded-xl p-8 h-full hover-lift shadow-lg border border-gray-100">
+                        <div class="bg-gradient-to-br from-yellow-500 to-amber-600 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">AI Training & Strategy</h4>
+                        <p class="text-gray-600 mb-4">
+                            Empower your team with the knowledge to leverage AI effectively.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li><i class="fas fa-arrow-right text-yellow-600 mr-2"></i>Executive workshops</li>
+                            <li><i class="fas fa-arrow-right text-yellow-600 mr-2"></i>Technical training</li>
+                            <li><i class="fas fa-arrow-right text-yellow-600 mr-2"></i>AI strategy consulting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Case Studies Section (Light Theme) -->
+    <section id="case-studies" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold mb-4 text-gray-900" data-aos="fade-up">
+                    <span class="gradient-text">Success Stories</span> That Inspire
+                </h3>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    Real-world implementations delivering transformative results
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Case Study 1 -->
+                <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-white rounded-xl overflow-hidden hover-lift shadow-lg border border-gray-100">
+                        <div class="h-48 bg-gradient-to-br from-indigo-600 to-purple-700 flex items-center justify-center">
+                            <i class="fas fa-hospital text-white text-5xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm text-indigo-600 font-medium">Healthcare</span>
+                                <span class="text-sm text-gray-500">2024</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">AI-Powered Diagnostic Platform</h4>
+                            <p class="text-gray-600 mb-4">
+                                Reduced diagnostic time by 60% and improved accuracy to 94% for a major hospital network using advanced image recognition.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex space-x-4 text-sm">
+                                    <span class="text-green-600 font-medium"><i class="fas fa-arrow-up mr-1"></i>40% efficiency</span>
+                                    <span class="text-blue-600 font-medium"><i class="fas fa-dollar-sign mr-1"></i>$2M saved</span>
+                                </div>
+                                <i class="fas fa-arrow-right text-gray-400 group-hover:text-indigo-600 transition"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Case Study 2 -->
+                <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-white rounded-xl overflow-hidden hover-lift shadow-lg border border-gray-100">
+                        <div class="h-48 bg-gradient-to-br from-green-600 to-teal-700 flex items-center justify-center">
+                            <i class="fas fa-chart-line text-white text-5xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm text-green-600 font-medium">Finance</span>
+                                <span class="text-sm text-gray-500">2024</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Intelligent Trading System</h4>
+                            <p class="text-gray-600 mb-4">
+                                Developed ML algorithms that increased trading profits by 35% while reducing risk exposure by 50% for a hedge fund.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex space-x-4 text-sm">
+                                    <span class="text-green-600 font-medium"><i class="fas fa-arrow-up mr-1"></i>35% returns</span>
+                                    <span class="text-blue-600 font-medium"><i class="fas fa-shield-alt mr-1"></i>50% risk reduction</span>
+                                </div>
+                                <i class="fas fa-arrow-right text-gray-400 group-hover:text-green-600 transition"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Case Study 3 -->
+                <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-white rounded-xl overflow-hidden hover-lift shadow-lg border border-gray-100">
+                        <div class="h-48 bg-gradient-to-br from-orange-600 to-red-700 flex items-center justify-center">
+                            <i class="fas fa-industry text-white text-5xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm text-orange-600 font-medium">Manufacturing</span>
+                                <span class="text-sm text-gray-500">2023</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Predictive Maintenance AI</h4>
+                            <p class="text-gray-600 mb-4">
+                                Prevented 85% of equipment failures and reduced maintenance costs by $5M annually for a Fortune 500 manufacturer.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex space-x-4 text-sm">
+                                    <span class="text-green-600 font-medium"><i class="fas fa-arrow-down mr-1"></i>85% downtime</span>
+                                    <span class="text-blue-600 font-medium"><i class="fas fa-dollar-sign mr-1"></i>$5M saved</span>
+                                </div>
+                                <i class="fas fa-arrow-right text-gray-400 group-hover:text-orange-600 transition"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="500">
+                <a href="#contact" class="inline-flex items-center text-indigo-600 hover:text-indigo-700 transition font-medium">
+                    View All Case Studies <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Insights Section (Light Theme) -->
+    <section id="insights" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold mb-4 text-gray-900" data-aos="fade-up">
+                    <span class="gradient-text">AI Insights</span> & Thought Leadership
+                </h3>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    Stay ahead with our latest research and industry perspectives
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Insight 1 -->
+                <article class="group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-white rounded-xl overflow-hidden hover-lift shadow-lg border border-gray-100">
+                        <div class="h-48 bg-gradient-to-br from-purple-600 to-indigo-700 p-6 flex items-end">
+                            <div>
+                                <span class="text-sm text-purple-200 font-medium">Research Paper</span>
+                                <h4 class="text-xl font-bold text-white mt-2">The Future of Healthcare AI: 2025 and Beyond</h4>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">
+                                Exploring how generative AI and multimodal models are revolutionizing patient care and drug discovery.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-500">5 min read</span>
+                                <a href="#" class="text-indigo-600 hover:text-indigo-700 transition font-medium">
+                                    Read More <i class="fas fa-arrow-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Insight 2 -->
+                <article class="group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-white rounded-xl overflow-hidden hover-lift shadow-lg border border-gray-100">
+                        <div class="h-48 bg-gradient-to-br from-green-600 to-teal-700 p-6 flex items-end">
+                            <div>
+                                <span class="text-sm text-green-200 font-medium">Industry Report</span>
+                                <h4 class="text-xl font-bold text-white mt-2">Enterprise AI Adoption: Key Success Factors</h4>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">
+                                Learn from our analysis of 100+ successful AI implementations across Fortune 500 companies.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-500">8 min read</span>
+                                <a href="#" class="text-indigo-600 hover:text-indigo-700 transition font-medium">
+                                    Read More <i class="fas fa-arrow-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Insight 3 -->
+                <article class="group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-white rounded-xl overflow-hidden hover-lift shadow-lg border border-gray-100">
+                        <div class="h-48 bg-gradient-to-br from-orange-600 to-red-700 p-6 flex items-end">
+                            <div>
+                                <span class="text-sm text-orange-200 font-medium">Technical Guide</span>
+                                <h4 class="text-xl font-bold text-white mt-2">Building Scalable RAG Systems</h4>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">
+                                A comprehensive guide to implementing Retrieval-Augmented Generation at enterprise scale.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-500">12 min read</span>
+                                <a href="#" class="text-indigo-600 hover:text-indigo-700 transition font-medium">
+                                    Read More <i class="fas fa-arrow-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Technology Stack (Light Theme) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold mb-4 text-gray-900" data-aos="fade-up">Our Technology Arsenal</h3>
+                <p class="text-xl text-gray-600" data-aos="fade-up" data-aos-delay="100">Leveraging best-in-class AI platforms and frameworks</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                <div class="bg-white rounded-xl p-6 text-center hover-lift shadow-lg border border-gray-100" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fab fa-python text-4xl text-blue-500 mb-3"></i>
+                    <p class="text-sm font-medium text-gray-700">Python</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center hover-lift shadow-lg border border-gray-100" data-aos="zoom-in" data-aos-delay="150">
+                    <i class="fas fa-brain text-4xl text-purple-500 mb-3"></i>
+                    <p class="text-sm font-medium text-gray-700">TensorFlow</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center hover-lift shadow-lg border border-gray-100" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fas fa-fire text-4xl text-orange-500 mb-3"></i>
+                    <p class="text-sm font-medium text-gray-700">PyTorch</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center hover-lift shadow-lg border border-gray-100" data-aos="zoom-in" data-aos-delay="250">
+                    <i class="fab fa-aws text-4xl text-yellow-500 mb-3"></i>
+                    <p class="text-sm font-medium text-gray-700">AWS</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center hover-lift shadow-lg border border-gray-100" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fab fa-microsoft text-4xl text-blue-600 mb-3"></i>
+                    <p class="text-sm font-medium text-gray-700">Azure AI</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center hover-lift shadow-lg border border-gray-100" data-aos="zoom-in" data-aos-delay="350">
+                    <i class="fab fa-google text-4xl text-green-500 mb-3"></i>
+                    <p class="text-sm font-medium text-gray-700">Google Cloud</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center hover-lift shadow-lg border border-gray-100" data-aos="zoom-in" data-aos-delay="400">
+                    <i class="fas fa-robot text-4xl text-indigo-500 mb-3"></i>
+                    <p class="text-sm font-medium text-gray-700">OpenAI</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center hover-lift shadow-lg border border-gray-100" data-aos="zoom-in" data-aos-delay="450">
+                    <i class="fas fa-smile text-4xl text-yellow-600 mb-3"></i>
+                    <p class="text-sm font-medium text-gray-700">Hugging Face</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center hover-lift shadow-lg border border-gray-100" data-aos="zoom-in" data-aos-delay="500">
+                    <i class="fas fa-link text-4xl text-purple-600 mb-3"></i>
+                    <p class="text-sm font-medium text-gray-700">LangChain</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center hover-lift shadow-lg border border-gray-100" data-aos="zoom-in" data-aos-delay="550">
+                    <i class="fas fa-database text-4xl text-red-500 mb-3"></i>
+                    <p class="text-sm font-medium text-gray-700">Vector DBs</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center hover-lift shadow-lg border border-gray-100" data-aos="zoom-in" data-aos-delay="600">
+                    <i class="fas fa-dharmachakra text-4xl text-blue-700 mb-3"></i>
+                    <p class="text-sm font-medium text-gray-700">Kubernetes</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center hover-lift shadow-lg border border-gray-100" data-aos="zoom-in" data-aos-delay="650">
+                    <i class="fas fa-stream text-4xl text-teal-500 mb-3"></i>
+                    <p class="text-sm font-medium text-gray-700">MLflow</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section (Gradient) -->
+    <section class="py-20 relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700">
+        <div class="relative z-10 max-w-4xl mx-auto text-center px-4">
+            <h3 class="text-4xl md:text-5xl font-bold text-white mb-6" data-aos="zoom-in">
+                Ready to Lead with AI?
+            </h3>
+            <p class="text-xl text-indigo-100 mb-8" data-aos="zoom-in" data-aos-delay="100">
+                Join the ranks of industry leaders who are transforming their businesses with our AI expertise
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="zoom-in" data-aos-delay="200">
+                <a href="#contact" class="bg-white text-indigo-700 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transform hover:scale-105 transition">
+                    Schedule Your Consultation
+                </a>
+                <a href="https://www.linkedin.com/in/annutalluri/" target="_blank" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-indigo-700 transition">
+                    <i class="fab fa-linkedin mr-2"></i>Connect on LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section (Light Theme) -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <h3 class="text-4xl font-bold mb-6 text-gray-900">
+                        Let's <span class="gradient-text">Transform</span> Your Business
+                    </h3>
+                    <p class="text-gray-600 mb-8 text-lg">
+                        Whether you're starting your AI journey or scaling existing solutions, our team is ready to deliver results that matter.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-envelope text-indigo-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Email Us</h4>
+                                <p class="text-gray-600">tallconsulting2024@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-phone text-indigo-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Call Us</h4>
+                                <p class="text-gray-600">0000000000</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-map-marker-alt text-indigo-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Visit Us</h4>
+                                <p class="text-gray-600">Chicago, Illinois, USA</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Trust Indicators -->
+                    <div class="mt-8 pt-8 border-t border-gray-200">
+                        <div class="flex items-center space-x-6">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold gradient-text">100%</div>
+                                <div class="text-sm text-gray-500">Success Rate</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold gradient-text">24/7</div>
+                                <div class="text-sm text-gray-500">Support</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold gradient-text">NDA</div>
+                                <div class="text-sm text-gray-500">Protected</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-xl border border-gray-100" data-aos="fade-left">
+                    <form x-data="{ 
+                        formData: { name: '', email: '', company: '', phone: '', project: '', message: '' },
+                        errors: {},
+                        submitted: false,
+                        validateForm() {
+                            this.errors = {};
+                            if (!this.formData.name) this.errors.name = 'Name is required';
+                            if (!this.formData.email) this.errors.email = 'Email is required';
+                            else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.formData.email)) this.errors.email = 'Invalid email format';
+                            if (!this.formData.message) this.errors.message = 'Message is required';
+                            return Object.keys(this.errors).length === 0;
+                        },
+                        submitForm() {
+                            if (this.validateForm()) {
+                                this.submitted = true;
+                                setTimeout(() => { 
+                                    this.submitted = false;
+                                    this.formData = { name: '', email: '', company: '', phone: '', project: '', message: '' };
+                                }, 3000);
+                            }
+                        }
+                    }" @submit.prevent="submitForm()">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Name *</label>
+                                <input type="text" x-model="formData.name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-indigo-500 focus:outline-none transition">
+                                <p x-show="errors.name" class="text-red-500 text-sm mt-1" x-text="errors.name"></p>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Email *</label>
+                                <input type="email" x-model="formData.email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-indigo-500 focus:outline-none transition">
+                                <p x-show="errors.email" class="text-red-500 text-sm mt-1" x-text="errors.email"></p>
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6 mt-6">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Company</label>
+                                <input type="text" x-model="formData.company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-indigo-500 focus:outline-none transition">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Phone</label>
+                                <input type="tel" x-model="formData.phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-indigo-500 focus:outline-none transition">
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <label class="block text-gray-700 font-medium mb-2">Project Type</label>
+                            <select x-model="formData.project" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-indigo-500 focus:outline-none transition">
+                                <option value="">Select a project type</option>
+                                <option value="generative-ai">Generative AI Implementation</option>
+                                <option value="healthcare">Healthcare AI</option>
+                                <option value="finance">Financial AI</option>
+                                <option value="computer-vision">Computer Vision</option>
+                                <option value="consulting">AI Strategy Consulting</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <label class="block text-gray-700 font-medium mb-2">Message *</label>
+                            <textarea x-model="formData.message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-indigo-500 focus:outline-none transition"></textarea>
+                            <p x-show="errors.message" class="text-red-500 text-sm mt-1" x-text="errors.message"></p>
+                        </div>
+                        
+                        <button type="submit" class="w-full mt-6 btn-primary text-white py-3 rounded-lg font-semibold hover:scale-105 transform transition">
+                            <span>Send Message</span>
+                        </button>
+                        
+                        <div x-show="submitted" x-transition class="mt-4 p-4 bg-green-50 text-green-700 rounded-lg text-center border border-green-200">
+                            <i class="fas fa-check-circle mr-2"></i>Thank you! We'll get back to you within 24 hours.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer (Light Theme) -->
+    <footer class="bg-white border-t border-gray-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-2xl font-bold mb-4 text-gray-900">
+                        <span class="gradient-text">TALL</span> <span class="text-gray-600">Consulting</span>
+                    </h4>
+                    <p class="text-gray-600 text-sm mb-6">Pioneering AI solutions that transform industries and create lasting value.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/annutalluri/" target="_blank" class="bg-indigo-100 text-indigo-600 p-3 rounded-lg hover:bg-indigo-600 hover:text-white transition">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="bg-gray-100 text-gray-600 p-3 rounded-lg hover:bg-gray-600 hover:text-white transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="bg-gray-100 text-gray-600 p-3 rounded-lg hover:bg-gray-600 hover:text-white transition">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 class="font-semibold mb-4 text-gray-900">Solutions</h5>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li><a href="#services" class="hover:text-indigo-600 transition">Generative AI</a></li>
+                        <li><a href="#services" class="hover:text-indigo-600 transition">Healthcare AI</a></li>
+                        <li><a href="#services" class="hover:text-indigo-600 transition">Financial AI</a></li>
+                        <li><a href="#services" class="hover:text-indigo-600 transition">Computer Vision</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="font-semibold mb-4 text-gray-900">Company</h5>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li><a href="#about" class="hover:text-indigo-600 transition">About Us</a></li>
+                        <li><a href="#case-studies" class="hover:text-indigo-600 transition">Case Studies</a></li>
+                        <li><a href="#insights" class="hover:text-indigo-600 transition">Insights</a></li>
+                        <li><a href="#contact" class="hover:text-indigo-600 transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="font-semibold mb-4 text-gray-900">Stay Updated</h5>
+                    <p class="text-gray-600 text-sm mb-4">Subscribe to our newsletter for AI insights and updates.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="flex-1 px-4 py-2 border border-gray-300 rounded-l-lg focus:outline-none focus:border-indigo-500">
+                        <button class="bg-indigo-600 px-4 py-2 rounded-r-lg hover:bg-indigo-700 transition text-white">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-200 mt-8 pt-8 text-center text-gray-600 text-sm">
+                <p>&copy; 2024 Tall Consulting. All rights reserved. | Transforming tomorrow with AI today.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button 
+        x-data="{ show: false }" 
+        x-show="show" 
+        x-transition
+        @scroll.window="show = window.pageYOffset > 300"
+        @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+        class="fixed bottom-8 right-8 bg-indigo-600 text-white p-4 rounded-full shadow-lg hover:bg-indigo-700 hover:scale-110 transition-all duration-300 z-50"
+    >
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>
